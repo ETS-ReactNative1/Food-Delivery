@@ -3,11 +3,11 @@ import React from 'react';
 import Label from './Label';
 import Input from './Input';
 
-const LabelAndInput = ({label, placeholder}) => {
+const LabelAndInput = ({label, placeholder, password}) => {
   return (
     <View style={styles.container}>
       <Label name={label} />
-      <Input placeholder={placeholder} />
+      <Input placeholder={placeholder} secureTextEntry={password} />
     </View>
   );
 };
@@ -16,6 +16,6 @@ export default LabelAndInput;
 
 const styles = StyleSheet.create({
     container:{
-        marginVertical:20
+        marginVertical:12
     }
 });

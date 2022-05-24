@@ -4,7 +4,7 @@ import React from 'react';
 const Input = props => {
   return (
     <View>
-      <TextInput style={styles.input} {...props} />
+      <TextInput style={styles.input} {...props}  />
     </View>
   );
 };

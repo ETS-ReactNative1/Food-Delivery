@@ -3,10 +3,11 @@ import React from 'react';
 import LabelAndInput from '../components/LabelAndInput';
 import Button from '../components/Button';
 
-const Login = () => {
+const SignUp = () => {
   return (
     <ScrollView style={{flex: 1}}>
       <View style={styles.container}>
+        <LabelAndInput label="Full Name" placeholder="Enter your full name" />
         <LabelAndInput
           label="Email address"
           placeholder="Enter your email address"
@@ -16,20 +17,19 @@ const Login = () => {
           placeholder={'Enter your password'}
           password={true}
         />
-        <Text style={styles.forgotPasscode}>Forgot passcode?</Text>
-        <Button title={'Login'} />
+        <Button title={'Sign Up'} />
       </View>
     </ScrollView>
   );
 };
 
-export default Login;
+export default SignUp;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     marginHorizontal: 50,
-    marginVertical: 32,
+    marginVertical: 8,
   },
   forgotPasscode: {
     fontSize: 17,
