@@ -3,7 +3,7 @@ import React from 'react';
 import Tab from '../components/Tab';
 import LoginStack from '../navigation/LoginStack';
 
-const AuthLayout = () => {
+const AuthLayout = ({navigation}) => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -18,8 +18,18 @@ const AuthLayout = () => {
           />
         </View>
         <View style={styles.tabView}>
-          <Tab title="Login" active={true} />
-          <Tab title="Sign-up" active={false} />
+          <Tab
+            title="Login"
+            active={true}
+            navigation={navigation}
+            routeName="Login"
+          />
+          <Tab
+            title="Sign-up"
+            active={false}
+            navigation={navigation}
+            routeName="SignUp"
+          />
         </View>
         <View style={styles.activeBar} />
       </View>

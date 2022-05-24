@@ -1,14 +1,19 @@
 const initialState = {
-  data: [],
+  data: {},
 };
 
-const auths = (state = initialState, action) => {
+const auth = (state = initialState, action) => {
   switch (action.type) {
-    case 'EXAMPLE':
+    case 'USER_LOGIN':
       return {...state, data: action.data};
+    case 'USER_REGISTER':
+      return {...state, data: action.data};
+    case 'USER_LOGOUT':
+      return {...state, data: action.data};
+
     default:
       return {...state};
   }
 };
 
-export default auths;
+export default auth;

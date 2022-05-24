@@ -3,11 +3,11 @@ import React from 'react';
 import Label from './Label';
 import Input from './Input';
 
-const LabelAndInput = ({label, placeholder, password}) => {
+const LabelAndInput = ({label, placeholder, password, control, name}) => {
   return (
     <View style={styles.container}>
       <Label name={label} />
-      <Input placeholder={placeholder} secureTextEntry={password} />
+      <Input placeholder={placeholder} secureTextEntry={password} control={control} name={name} />
     </View>
   );
 };

@@ -3,7 +3,7 @@ import React from 'react';
 
 const Button = ({title}) => {
   return (
-    <View style={styles.button}>
+    <View style={styles.button} >
       <Text style={styles.title}>{title}</Text>
     </View>
   );

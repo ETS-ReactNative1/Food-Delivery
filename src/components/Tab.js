@@ -1,12 +1,23 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, Text, View, TouchableOpacity} from 'react-native';
 import React from 'react';
+import {useDispatch, useSelector} from 'react-redux';
+import {setTab} from '../redux/actions/navigation';
 
-const Tab = ({title, active}) => {
+const Tab = ({title, active, navigation, routeName}) => {
+  const dispatch = useDispatch();
+  const store = useSelector(state => state.navigations);
+
+
+  const tabFunc = () => {
+    dispatch(setTab(routeName));
+    navigation.navigate(routeName);
+  };
+
   return (
-    <View style={styles.tab}>
+    <TouchableOpacity style={styles.tab} onPress={() => tabFunc()}>
       <Text style={styles.title}>{title}</Text>
-      <View style={styles.active(active)} />
-    </View>
+      <View style={styles.active(store.data === routeName ? true : false)} />
+    </TouchableOpacity>
   );
 };
 
@@ -22,9 +33,9 @@ const styles = StyleSheet.create({
   tab: {
     flex: 1,
     alignItems: 'center',
-    marginHorizontal:32
+    marginHorizontal: 32,
   },
-  active:(active) => ({
+  active: active => ({
     width: '100%',
     height: 3,
     backgroundColor: active ? '#FA4A0C' : '#FFFFFF',
