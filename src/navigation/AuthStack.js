@@ -4,21 +4,23 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Login from '../screens/Login';
 import Register from '../screens/Register';
+import AuthLayout from '../layouts/AuthLayout';
 
 const Stack = createNativeStackNavigator();
 
-const LoginStack = () => {
+const AuthStack = () => {
   return (
-    <Stack.Navigator
-      screenOptions={{
-        headerShown: false,
-      }}>
-      <Stack.Screen name="Login" component={Login} />
-      <Stack.Screen name="Register" component={Register} />
-    </Stack.Navigator>
+    <NavigationContainer>
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false,
+        }}>
+        <Stack.Screen name="AuthLayout" component={AuthLayout} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 
-export default LoginStack;
+export default AuthStack;
 
 const styles = StyleSheet.create({});
