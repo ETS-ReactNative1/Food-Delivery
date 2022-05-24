@@ -13,7 +13,11 @@ import {useDispatch} from 'react-redux';
 import {userRegister} from '../redux/actions/auth';
 
 const SignUp = () => {
-  const {control, handleSubmit} = useForm();
+  const {
+    control,
+    handleSubmit,
+    formState: {errors},
+  } = useForm();
 
   const dispatch = useDispatch();
   const onSubmit = data => dispatch(userRegister(data));
@@ -26,19 +30,32 @@ const SignUp = () => {
           placeholder="Enter your full name"
           name="fullname"
           control={control}
+          errors={errors}
+          rules={{
+            required: true,
+          }}
         />
         <LabelAndInput
           label="Email address"
           placeholder="Enter your email address"
-          name={'email'}
           control={control}
+          errors={errors}
+          name="email"
+          rules={{
+            required: true,
+            pattern: {value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i},
+          }}
         />
         <LabelAndInput
           label="Password"
           placeholder={'Enter your password'}
           password={true}
-          name="password"
           control={control}
+          errors={errors}
+          name="password"
+          rules={{
+            required: true,
+          }}
         />
         <TouchableOpacity onPress={handleSubmit(onSubmit)}>
           <Button title={'Sign Up'} />

@@ -7,7 +7,15 @@ import {useSelector} from 'react-redux';
 const Routes = () => {
   const store = useSelector(state => state.auths);
 
-  return <>{Object.keys(store.data).length !== 0 ? <MainNavigation /> : <AuthStack />}</>;
+  return (
+    <>
+      {Object.keys(store.data).length !== 0 ? (
+        <MainNavigation />
+      ) : (
+        <AuthStack />
+      )}
+    </>
+  );
 };
 
 export default Routes;
