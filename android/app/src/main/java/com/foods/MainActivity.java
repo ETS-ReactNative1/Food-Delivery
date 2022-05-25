@@ -6,12 +6,14 @@ import com.facebook.react.ReactRootView;
 
 //React Navigation
 import android.os.Bundle;
-
+//Splash Screen
+import org.devio.rn.splashscreen.SplashScreen;
 
 public class MainActivity extends ReactActivity {
   //React Navigation
   @Override
   protected void onCreate(Bundle savedInstanceState) {
+    SplashScreen.show(this);
     super.onCreate(null);
   }
 
