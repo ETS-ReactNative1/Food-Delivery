@@ -20,7 +20,8 @@ export default SubHeader;
 
 const styles = StyleSheet.create({
   container: {
-    margin: 32,
+    marginHorizontal: 32,
+    marginBottom:32
   },
   bottom: {
     marginVertical: 32,

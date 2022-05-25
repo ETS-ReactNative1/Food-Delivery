@@ -6,3 +6,12 @@ export const setTab = data => {
     });
   };
 };
+
+export const setSliderTab = data => {
+  return dispatch => {
+    dispatch({
+      type: 'SET_SLIDER_TAB',
+      data: data,
+    });
+  };
+};

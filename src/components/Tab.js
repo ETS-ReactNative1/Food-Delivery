@@ -3,7 +3,7 @@ import React from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {setTab} from '../redux/actions/navigation';
 
-const Tab = ({title, active, navigation, routeName}) => {
+const Tab = ({title, navigation, routeName}) => {
   const dispatch = useDispatch();
   const store = useSelector(state => state.navigations);
 

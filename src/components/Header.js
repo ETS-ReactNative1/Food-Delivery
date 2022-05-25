@@ -25,7 +25,8 @@ export default Header;
 
 const styles = StyleSheet.create({
   container: {
-    margin: 32,
+    marginHorizontal: 32,
+    marginTop:32
   },
   top: {
     flexDirection: 'row',

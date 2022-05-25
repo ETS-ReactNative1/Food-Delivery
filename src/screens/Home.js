@@ -1,7 +1,8 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import Header from '../components/Header';
 import SubHeader from '../components/SubHeader';
+import Card from '../components/Card';
+import Slider from '../components/Slider';
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
         backgroundColor:'#F2F2F2'
       }}>
         <SubHeader/>
+        <Slider/>
     </View>
   );
 };

@@ -17,13 +17,11 @@ const AuthLayout = ({navigation}) => {
         <View style={styles.tabView}>
           <Tab
             title="Login"
-            active={true}
             navigation={navigation}
             routeName="Login"
           />
           <Tab
             title="Sign-up"
-            active={false}
             navigation={navigation}
             routeName="SignUp"
           />
