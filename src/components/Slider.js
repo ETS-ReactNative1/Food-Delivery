@@ -9,7 +9,6 @@ const Slider = () => {
   const store = useSelector(state => state.navigations);
 
   const getData = data => {
-    console.log(data);
     switch (data) {
       case 'Foods':
         return Foods;
