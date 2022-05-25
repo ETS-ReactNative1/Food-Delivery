@@ -12,7 +12,7 @@ const Routes = () => {
       {Object.keys(store.data).length !== 0 ? (
         <MainNavigation />
       ) : (
-        <MainNavigation />
+        <AuthStack />
       )}
     </>
   );
