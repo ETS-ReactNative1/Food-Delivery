@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View, Image} from 'react-native';
+import {StyleSheet, View, Image} from 'react-native';
 import React from 'react';
 import Tab from '../components/Tab';
 import LoginStack from '../navigation/LoginStack';
@@ -15,16 +15,8 @@ const AuthLayout = ({navigation}) => {
           />
         </View>
         <View style={styles.tabView}>
-          <Tab
-            title="Login"
-            navigation={navigation}
-            routeName="Login"
-          />
-          <Tab
-            title="Sign-up"
-            navigation={navigation}
-            routeName="SignUp"
-          />
+          <Tab title="Login" navigation={navigation} routeName="Login" />
+          <Tab title="Sign-up" navigation={navigation} routeName="SignUp" />
         </View>
         <View style={styles.activeBar} />
       </View>

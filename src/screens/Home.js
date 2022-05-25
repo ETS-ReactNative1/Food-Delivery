@@ -1,7 +1,6 @@
-import {StyleSheet, Text, View} from 'react-native';
+import {StyleSheet, View} from 'react-native';
 import React from 'react';
 import SubHeader from '../components/SubHeader';
-import Card from '../components/Card';
 import Slider from '../components/Slider';
 
 const Home = () => {
@@ -9,10 +8,10 @@ const Home = () => {
     <View
       style={{
         flex: 1,
-        backgroundColor:'#F2F2F2'
+        backgroundColor: '#F2F2F2',
       }}>
-        <SubHeader/>
-        <Slider/>
+      <SubHeader />
+      <Slider />
     </View>
   );
 };

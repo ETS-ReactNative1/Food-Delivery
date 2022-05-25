@@ -1,11 +1,10 @@
-import {StyleSheet, Text, View, ScrollView, FlatList} from 'react-native';
+import {StyleSheet, View, FlatList} from 'react-native';
 import React from 'react';
-import Swiper from 'react-native-swiper';
 import Card from './Card';
-import Tab from './Tab';
 import Category from './Category';
 import {Foods, Drinks, Snacks} from '../fakedb/Database';
 import {useSelector} from 'react-redux';
+
 const Slider = () => {
   const store = useSelector(state => state.navigations);
 

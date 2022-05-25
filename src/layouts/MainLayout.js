@@ -1,9 +1,10 @@
-import {StyleSheet, Text, View} from 'react-native';
-import React, {useEffect, useState, useRef} from 'react';
+import {StyleSheet} from 'react-native';
+import React from 'react';
 import TabNavigation from '../navigation/TabNavigation';
 import Animated from 'react-native-reanimated';
 import {useDrawerProgress} from '@react-navigation/drawer';
 import Header from '../components/Header';
+
 const MainLayout = ({navigation}) => {
   const progress = useDrawerProgress();
   const scale = Animated.interpolateNode(progress, {
