@@ -1,23 +1,22 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {NavigationContainer} from '@react-navigation/native';
-import Home from '../screens/Home';
-import Profile from '../screens/Profile';
 
-const Tabs = createBottomTabNavigator();
+import CustomDrawer from './CustomDrawer';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+
+const Stack = createNativeStackNavigator();
 
 const MainNavigation = () => {
   return (
     <NavigationContainer>
-      <Tabs.Navigator
+      <Stack.Navigator
         screenOptions={{
           headerShown: false,
-          tabBarShowLabel: false,
-        }}>
-        <Tabs.Screen name="Home" component={Home} />
-        <Tabs.Screen name="Profile" component={Profile} />
-      </Tabs.Navigator>
+        }}
+        initialRouteName={'Main'}>
+        <Stack.Screen name="Home" component={CustomDrawer} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 };

@@ -8,10 +8,7 @@ const AuthLayout = ({navigation}) => {
     <View style={styles.container}>
       <View style={styles.header}>
         <View style={styles.logo}>
-          <Image
-            style={styles.image}
-            source={require('../assets/images/login_logo.png')}
-          />
+          <Image source={require('../assets/images/login_logo.png')} />
           <Image
             style={styles.vector}
             source={require('../assets/images/login_vector1.png')}
