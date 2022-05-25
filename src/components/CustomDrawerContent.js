@@ -9,7 +9,11 @@ import privacyPolicy from '../assets/icons/ic_outline-sticky-note-2.png';
 import security from '../assets/icons/whh_securityalt.png';
 import arrow from '../assets/icons/arrow.png';
 import Divider from './Divider';
+import {useDispatch} from 'react-redux';
+import {userLogout} from '../redux/actions/auth';
+
 const CustomDrawerContent = () => {
+  const dispatch = useDispatch();
   return (
     <DrawerContentScrollView
       scrollEnabled={true}
@@ -28,7 +32,9 @@ const CustomDrawerContent = () => {
           <Divider />
         </View>
         <View style={styles.footer}>
-          <TouchableOpacity style={styles.signOut}>
+          <TouchableOpacity
+            style={styles.signOut}
+            onPress={() => dispatch(userLogout())}>
             <Text style={styles.item}>Sign-out</Text>
             <Image source={arrow} style={styles.icon} />
           </TouchableOpacity>

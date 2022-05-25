@@ -10,6 +10,7 @@ const CustomDrawer = () => {
   return (
     <View style={styles.container}>
       <Drawer.Navigator
+        useLegacyImplementation
         screenOptions={{
           drawerType: 'slide',
           headerShown: false,
@@ -29,9 +30,7 @@ const CustomDrawer = () => {
           return <CustomDrawerContent />;
         }}>
         <Drawer.Screen name="MainLayout">
-          {props => (
-            <MainLayout {...props}  />
-          )}
+          {props => <MainLayout {...props} />}
         </Drawer.Screen>
       </Drawer.Navigator>
     </View>
