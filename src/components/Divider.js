@@ -12,5 +12,6 @@ const styles = StyleSheet.create({
     height: 0.5,
     backgroundColor: '#F4F4F8',
     marginLeft: 50,
+    marginVertical:10
   },
 });

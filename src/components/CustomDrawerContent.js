@@ -29,7 +29,6 @@ const CustomDrawerContent = () => {
           <CustomDrawerItem label="Privacy policy" icon={privacyPolicy} />
           <Divider />
           <CustomDrawerItem label="Security" icon={security} />
-          <Divider />
         </View>
         <View style={styles.footer}>
           <TouchableOpacity
@@ -49,17 +48,12 @@ export default CustomDrawerContent;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 16,
+    marginLeft:16
   },
   drawerItem: {
     flex: 1,
-    marginTop: 20,
-    justifyContent: 'center',
-  },
-  divider: {
-    height: 1,
-    backgroundColor: 'white',
-    marginLeft: 50,
+    marginTop: 110,
+    justifyContent: 'flex-start',
   },
   signOut: {
     flexDirection: 'row',
@@ -70,7 +64,7 @@ const styles = StyleSheet.create({
     borderRadius: 16,
   },
   footer: {
-    flex: 0.2,
+    flex: 0.17,
     justifyContent: 'flex-end',
   },
   icon: {
